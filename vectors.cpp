@@ -28,6 +28,12 @@ vector<int> v1(5,20);;
 //to copy this vector in other vector v2
 vector<int> v2(v1);
 
+
+//v.begin() gives the memory address and *(v.begin()) helps us to get the value at that location 
+//v.begin() points to first element of v
+//v.end() points to location after the last element
+//v.back()points at last element
+
 for(vector<int>::iterator it=v.begin();it!=v.end();it++)
 {
     cout<<*(it)<<" ";
@@ -36,6 +42,32 @@ for(auto it=v.begin();it!=v.end();it++)
 {
     cout<<*(it)<<" ";
 }
+
+//deletion of elements
+//suppose we have {10,20,30,40,50,60}
+v.erase(v.begin()+1);//deletes 20//new {10,30,40,50,60}
+v.erase(v.begin()+2,v.begin()+4);//start to end(after the element)//new {10,60}
+
+
+//inserting element
+vector<int> p(2,100);//{100,100}
+p.insert(p.begin(),300);//{300,100,100} insert at that position
+p.insert(p.begin()+1,2,10);//{300,10,10,100,100}insets 2 10s
+
+//inserting a vector to another vector
+vector<int> copy(2,50);
+p.insert(p.begin(),copy.begin(),copy.end());//{50,50,300,10,10,100,100}
+
+
+v.size();// gives number of elements
+v.pop_back() ;//removes last element
+v1.swap(v);//swaps 2 vectors
+v.clear();//erases entire vector
+
+
+
+
+
 
 
 
