@@ -9,6 +9,7 @@ int main()
     ls.emplace_back(4);
     ls.push_front(5);
     ls.emplace_front(7); 
+    //rest same begin end rbegin rend clear insert swap size 
     for(auto it=ls.begin();it!=ls.end();it++)
     {
        cout<<*(it)<<" ";
